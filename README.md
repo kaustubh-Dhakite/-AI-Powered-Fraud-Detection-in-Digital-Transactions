@@ -344,30 +344,6 @@ sequenceDiagram
 
 ---
 
-### 🔁 Case Lifecycle Workflow
-
-```mermaid
-stateDiagram-v2
-    [*] --> OPEN : 🔴 High-risk transaction detected\n(auto-created or manual)
-
-    OPEN --> IN_REVIEW : 👁️ Analyst picks up case
-    OPEN --> CLOSED : ⚡ Admin closes without review
-
-    IN_REVIEW --> ESCALATED : 🚨 Requires senior attention
-    IN_REVIEW --> RESOLVED : ✅ Analyst confirms fraud / clears
-
-    ESCALATED --> RESOLVED : ✅ Senior analyst resolves
-    ESCALATED --> CLOSED : ❌ Closed as false positive
-
-    RESOLVED --> CLOSED : 📁 Case archived
-    CLOSED --> [*]
-
-    note right of OPEN : Auto-assigned if rule:\nFROZEN_ACCOUNT triggered
-    note right of RESOLVED : SHAP report attached\nto resolution record
-```
-
----
-
 ## 🧠 Machine Learning Pipeline
 
 ```mermaid
@@ -1219,6 +1195,6 @@ See the full [`LICENSE`](LICENSE) file for details.
 
 <br/>
 
-<sub>PayRadar © 2024 · MIT License · Made for the open-source community</sub>
+<sub>PayRadar © 2026 · MIT License · Made for the open-source community</sub>
 
 </div>
